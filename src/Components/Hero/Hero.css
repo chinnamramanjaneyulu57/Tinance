@@ -1,0 +1,92 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%) 
+    /*fills every part with image */
+
+}
+.hero-text{
+     position: absolute;
+     top:55%;
+     left:50%;
+     transform: translate(-50%, -50%);
+     width: 100%;
+}
+
+.hero-text h1{
+    font-size: 3rem;
+    font-weight: 600;
+    background:rgb(242, 243, 240);
+    /*for box shadow we use webkit */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p{
+    font-size: 1.3rem;
+    color:rgb(242, 243, 240);
+    font-weight: 600;
+    padding: 0.5rem 0 2rem 0;
+
+}
+/*Here we can use .hero-text a & .hero-text .btnclass & .btnclass */
+.hero-text .btnclass{
+    text-decoration: none;
+    background: rgb(242, 243, 240);
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+
+}
+
+
+/* for remaing all pages */
+.hero-mid{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.hero-mid h1{
+    padding: 4rem !important;
+}
+
+
+
+/* add media screen for mobile screen  decide whether 850 or 555*/
+@media screen and (max-width:555px){
+    
+    .hero-text h1{
+        padding: 10px 20px;   
+        font-size: 2rem;
+    }
+    .hero-text p{
+        font-size: 1.1rem;
+        padding:0 0 2rem 0;
+
+    }
+    .hero-text .btnclass{
+        padding: 0.6rem 1.1rem;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+
+    .hero{
+        height: 78vh;
+    }
+
+    .hero-mid{
+        height: 40vh;        
+    }
+
+}

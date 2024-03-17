@@ -1,0 +1,21 @@
+.faq-data{
+        margin: 4rem 6rem; 
+        text-align: start;
+}
+
+.faq-data h2{
+    padding-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.faq-data p{
+    padding-bottom: 2rem;
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 850px){
+    .faq-data{
+       margin: 4rem 2rem;
+    }
+   }

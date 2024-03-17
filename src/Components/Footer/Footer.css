@@ -1,0 +1,65 @@
+.footer{
+    padding: 4rem 6rem;
+    background-color: black;
+    color: rgb(242, 243, 240);
+}
+
+/* Here top-row contains 2 div's - Hence flex will apply on both that div's */ 
+.top-row{
+    display: flex;
+    align-items: center;
+    /*set items to center Vertically */
+    text-align: start;
+    /*start text from margin */
+     justify-content: space-between;
+     /* flex items will have space between them */
+      flex-wrap: wrap;
+}
+
+.top-row i{
+    color:rgb(242, 243, 240);
+    font-size: 2rem;
+    margin-left: 1rem; 
+}
+
+.top-row i:hover{
+    color: rgb(159, 33, 11);
+
+}
+
+.bottom-row{
+    padding-top: 2rem;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bottom-row div{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-row h4{
+    font-size: 1.3rem;
+    padding: 1rem 0 0.8rem 0;   
+}
+
+.bottom-row a{
+   text-decoration: none;
+   color:rgb(242, 243, 240);
+   padding-bottom: 0.4rem;
+   font-size: 1.1rem;
+}
+
+@media screen and (max-width:850px){
+    .footer{
+        padding: 4rem 2rem;
+    }
+    .footer i{
+        margin: 1rem 1rem 0 0;
+    }
+    .bottom-row div{
+        width:50%;
+    }
+}

@@ -1,0 +1,214 @@
+.Navbar-items{
+    display: flex; 
+    /*to display in single row*/
+    justify-content: space-between;
+    /*Make space between Trippy and remaining all Home,About....*/
+    align-items: center;
+    /*To make it in center*/
+    padding: 0 30px;
+    /*0 - represents top and bottom*/
+    /* 30px - represents left and right*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    /*0 - from x-axis , 5px - from y-axis, 15px- radius , color*/
+    width:100%;
+    /*Navbar width*/
+    height:80px;
+    /*Navbar width*/
+    border-radius:0px;
+    position: fixed;
+    /*sticks*/
+    top:15px;
+    left:50%;
+    transform: translate(-50%);
+    z-index:9999;
+    /*To display on top of all*/
+    background-color: rgb(27, 52, 52);
+}
+
+.Navbar-items a{
+    text-decoration: none;
+}
+
+/*Then design Trippy and Remaing Home,About...*/
+.navbar-logo{
+    color:rgb(242, 243, 240);
+    font-size: 2rem;
+    cursor:pointer;
+}
+
+.navbar-logo::first-letter{
+    color: rgb(195, 82, 185);
+    font-size: 3rem;
+}
+
+
+
+/*Then style Home...*/
+.navbar-menu{
+    display: grid;
+    /*Display them in grid*/
+    grid-template-columns:repeat(8,auto);
+    /*Display them in single row total in number*/
+    grid-gap:15px;
+    /*Give gap between each item*/
+    list-style: none;
+    /*Remove the bullets of Lists*/
+    align-items: center;
+    /*Align items vertically Centered*/
+}
+
+.nav-links{
+    text-decoration: none;
+    color: rgb(242, 243, 240);
+    font-size:1.2rem;
+    /*font size will be 1.2 */
+    font-weight: 500;
+    /*font weight will be 600*/
+    padding: 0.5rem 0.7rem;
+    /*Padding for Top and Bottom = 0.7 , Left and Right= 1 Rem which is equal to 14 p;*/
+    white-space: nowrap;
+    /*It means if the text goes more than one line then it will not show but keep on shrinking until it fits into one line*/
+}
+/* For nav-link icon*/
+
+
+/*Change Color when hover on it*/
+.nav-links:hover{
+    background-color: rgb(11, 11, 11);
+    color:white;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    /*Transition effect when hover on links*/
+
+}
+
+/*Hiding Signup from large screen*-----Then create as button in Navbar.jsx*/
+.nav-links-mobile{
+    display: none;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size:1rem;
+    font-weight:600;
+    border:none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: aliceblue;
+    transition:0.2s ease-in-out;
+}
+.menu-icon i{
+    display:none;
+}
+
+@media screen and (max-width:850px){
+    .Navbar-items{
+        z-index: 99;
+        /*display among the other screens */
+
+    }
+    .navbar-menu{
+        display: flex;
+        flex-direction: column;
+        /* flex direction will be column*/
+        justify-content: flex-start;
+        /*Here Flex starts from beginning*/
+        background-color: rgb(242, 243, 240);
+        /*color of flex will become this*/
+        width: 100%;
+        /*width becomes 100*/
+        height: auto;
+        /*Height will auto adjust*/
+        position: absolute;
+        /*we can change to the required place*/
+        top:80px;
+        /* Here are making it to top */
+        left:-100%;
+        /* making left 0% *
+        initially it is 0 to make menu visible in media screen
+        then we make -100% to disapper from media screen*/
+
+        opacity: 0;
+        /* Here opacity means transparent lies b/w 0-1*
+        1- display cleat
+        0- disapper*/
+        align-items: stretch;
+        /* Stretching items vertically */
+        padding: 40px 0 30px 0;
+        /* Padding for each side top right bottom left*/
+        margin: 0;
+        /* Here it starts from page corner starting */
+        /*z-index:-1;
+        Here Z-index 1 display first......so on next with -'s*
+        For cheking we added initially--next transmit to active-menu*/
+        transition: 0.3s ease-in-out;
+        /*To see those coming from left* for closing*/
+        border-radius: 0px;
+    }
+
+    /*To make our hamburger visible  to activate on clicking it*/
+    .navbar-menu.active{
+        left:0;
+        /*To make visbile from left*/
+        opacity:1;
+        /*To appear in it*/
+        z-index:-1;
+        /*Z index so that navbar item comes over here*/
+        transition: 0.3s ease-in-out;
+        /*To see those coming from left* for opening*/
+
+    }
+
+    .nav-links{
+        display: block;
+        /* displays line -by line */
+        color: black;
+        font-weight:700 ;
+        width:100%;
+        font-size:1.2rem;
+        padding: 1.2rem 0;
+    }
+
+    .nav-links:hover{
+        background-color:  rgb(27, 52, 52);
+        color: rgb(242, 243, 240);
+        transition: none;
+    }
+    button{
+        display: none;
+    }
+    .nav-links-mobile{
+        display:block;
+        text-align: center;
+        padding: 1.5rem;
+        margin:auto;
+        border-radius: 4px;
+        width: 70%;
+        background-color:  rgb(27, 52, 52);
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+
+    }
+    .menu-icon i{
+        display: block;
+        cursor: pointer;
+        
+    }
+
+    .menu-icon i{
+        font-size:2rem ;
+        color: white;
+    }
+ 
+    
+
+
+
+}

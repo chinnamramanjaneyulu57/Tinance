@@ -1,0 +1,84 @@
+.trip{
+    margin: 4rem 3rem;
+    color:black;
+}
+
+.trip input{
+    height: 3rem;
+    width: 40%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    border:3px solid black;
+} 
+
+.tripcard{
+    margin-top:0.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.t-card{
+   width:18%;
+   margin-top: 1.8rem;
+   text-align: start;
+   box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+   border-radius: 7px;
+   cursor: pointer;
+   padding: 1rem 0.8rem;
+}
+
+.t-image{
+    height: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.t-image img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+
+}
+.t-image:hover img{
+    transform: scale(1.3);
+}
+
+.t-card h4{
+    font-size: 1.3rem;
+    padding: 0.9rem 0 0.2rem 0;
+}
+
+@media screen and (max-width:850px){
+    .trip{
+        margin: 4rem 2rem; 
+    }
+
+    .tripcard{
+        flex-direction: column;
+
+    }
+
+    .t-card h4{
+        font-size: 1.6rem;
+        padding: 0.9rem 0 0.2rem 0;
+    }
+    .t-card h5{
+        font-size: 1.3rem;
+    }
+
+    .t-card{
+        width:100%;
+        margin-bottom: 1.5rem;
+     }
+
+     .trip input{
+        width: 85%;
+    }
+
+     
+
+}
